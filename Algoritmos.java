@@ -57,6 +57,15 @@ public class Algoritmos
         System.out.println("Quantidade de comparações (QuickSort): " + compQ + "\n");
     }
 
+    private static boolean isSorted(int[] array)
+    {
+        for (int i = 0; i < array.length - 1; ++i)
+        {
+            if (array[i] > array[i + 1]) return false;
+        }
+        return true;
+    }
+
     private static String list(int[] array)
     {
         String sArray = "[";
@@ -189,14 +198,5 @@ public class Algoritmos
         {
             quickSort(array, i, end);
         }
-    }
-
-    private static boolean isSorted(int[] array)
-    {
-        for (int i = 0; i < array.length - 1; ++i)
-        {
-            if (array[i] > array[i + 1]) return false;
-        }
-        return true;
     }
 }
